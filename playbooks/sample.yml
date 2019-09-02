@@ -1,0 +1,13 @@
+- name: Play1
+  hosts: all
+  tasks:
+    - name: Print Hello from Play1
+      debug:
+        msg: Hello from Play1
+
+ - name: Play2
+   tasks:
+    - name: Print Hello from Play2
+      debug:
+        msg: Hello from Play2
+        
