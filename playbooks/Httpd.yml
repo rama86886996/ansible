@@ -1,0 +1,11 @@
+- name: Setup apache package
+  hosts: all
+  task:
+    - name: Installing apache
+      yum:
+        name: httpd
+        state: present
+    - name: Checking httpd running or not
+      service:
+        name: httpd
+        state: started
