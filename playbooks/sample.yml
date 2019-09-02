@@ -5,7 +5,8 @@
       debug:
         msg: Hello from Play1
 
- - name: Play2
+- name: Play2
+  hosts: all
    tasks:
     - name: Print Hello from Play2
       debug:
