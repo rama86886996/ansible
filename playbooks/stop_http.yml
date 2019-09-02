@@ -5,7 +5,7 @@
     - name: stop apache
       yum:
         name: httpd
-        state: stop
+        state: stopped
     - name: Checking httpd running or not
       service:
         name: httpd
