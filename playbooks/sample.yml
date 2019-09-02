@@ -7,7 +7,7 @@
 
 - name: Play2
   hosts: all
-   tasks:
+  tasks:
     - name: Print Hello from Play2
       debug:
         msg: Hello from Play2
