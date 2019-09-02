@@ -11,6 +11,10 @@
       debug: 
         msg: URL = {{URL}}
       vars:
-        #URL: task.google.com
+        URL: task.google.com
+
+    - name: Print URL from CLI
+      debug:
+        msg: URL_CLI = {{URL_CLI}}
 
     
