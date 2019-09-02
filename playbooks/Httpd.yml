@@ -1,6 +1,6 @@
 - name: Setup apache package
   hosts: all
-  task:
+  tasks:
     - name: Installing apache
       yum:
         name: httpd
