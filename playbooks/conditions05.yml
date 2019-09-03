@@ -1,5 +1,7 @@
 - name: Conditions
   hosts: all
+  vars:
+   epic: yes
   tasks:
     - name: Run when OS is centos
       debug:
@@ -10,3 +12,7 @@
       debug:
         msg: Hello Ubuntu
       when: ansible_distribution == "Debain"
+    - name: Run an action
+      debug:
+        msg: Hello Action SAHOO
+      when: epic
