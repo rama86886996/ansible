@@ -2,7 +2,7 @@
   hosts: all
   vars:
    epic: no
-   a: one
+   b: one
   tasks:
     - name: Run when OS is centos
       debug:
