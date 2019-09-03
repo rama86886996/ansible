@@ -1,7 +1,7 @@
 - name: Conditions
   hosts: all
   vars:
-   epic: yes
+   epic: no
   tasks:
     - name: Run when OS is centos
       debug:
