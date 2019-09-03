@@ -16,3 +16,7 @@
       debug:
         msg: Hello Action SAHOO
       when: epic
+    - name: Run when a is not defined
+      debug:
+        msg: a variable
+      when: a variable is undefined
