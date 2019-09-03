@@ -12,11 +12,13 @@
       debug:
         msg: Hello Ubuntu
       when: ansible_distribution == "Debain"
+
     - name: Run an action
       debug:
         msg: Hello Action SAHOO
       when: epic
+
     - name: Run when a is not defined
       debug:
-        msg: a variable
-      when: a variable is undefined
+        msg: "a"
+      when: a is undefined
