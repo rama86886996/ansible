@@ -4,7 +4,10 @@
     - name: Prf server Installation
       debug:
         msg: Web Insatall
+      tags: web
 
     - name: Prf apps Installation
       debug:
         msg: Apps Insatall
+      tags: app
+      
