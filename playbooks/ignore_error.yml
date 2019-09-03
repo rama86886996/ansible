@@ -4,8 +4,9 @@
     - name: Check tomcat is running or not
       shell: ps -ef | grep java | grep -v grep
       register: out
+      ignore_errors: yes
+      
 
     - name: Start tomcat
       debug:
         msg: Starting tomcat
-        
