@@ -18,7 +18,7 @@
         msg: Hello Action SAHOO
       when: epic
 
-    - name: Run when a is not defined
+    - name: Run when b is not defined
       debug:
-        msg: "a"
-      when: a is undefined
+        msg: "ab"
+      when: b is undefined
