@@ -1,0 +1,6 @@
+- name: Demo on reg-vars
+  hosts: all
+  tasks:
+    - name: Run shell command
+      shell: uptime
+      
