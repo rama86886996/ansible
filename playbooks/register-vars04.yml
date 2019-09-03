@@ -3,4 +3,9 @@
   tasks:
     - name: Run shell command
       shell: uptime
+      register: OUT
+
+    - name: Print OUT variable
+      debug:
+        msg: {{OUT}}
       
