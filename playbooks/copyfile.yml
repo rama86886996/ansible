@@ -1,0 +1,7 @@
+- name: copy file to remote node
+  hosts: all
+  tasks:
+    - name: copy a file
+      copy:
+        src: sample.txt
+        dest: /tmp/sample.txt  
