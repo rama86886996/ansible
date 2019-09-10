@@ -4,5 +4,6 @@
     - name: Demo on lineinfile
       lineinfile:
         path: /tmp/sample.txt
-        line: Hi
+        line: Hello
         
+
