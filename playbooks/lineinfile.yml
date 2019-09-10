@@ -1,0 +1,8 @@
+- name: Demo on lineinfile
+  hosts: all
+  tasks:
+    - name: Demo on lineinfile
+      lineinfile:
+        path: /tmp/sample.txt
+        line: Hello
+        
