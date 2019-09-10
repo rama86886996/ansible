@@ -1,0 +1,10 @@
+- name: Demo on privilege escalation
+  hosts: all
+  become: yes
+  tasks:
+    - name: Run id command
+      shell: id
+      register: out
+
+    - name: Display output of id
+      debug: msg="{{out}}"
