@@ -1,0 +1,10 @@
+- name: Demo on blockinfile
+  hosts: all
+  tasks:
+    - name: Demo on blockinfile
+      blockinfile:
+        path: /tmp/sample.txt
+        create: yes
+        block:
+          ProxyPass "/student" "http://localhost:8080/student"
+          ProxyPassReverse "/student"  "http://localhost:8080/student"
