@@ -1,0 +1,9 @@
+- name: demo on template
+  hosts: all
+  vars:
+    name: microsoft.com
+  tasks:
+    - name: template a file
+      template:
+        src: template.txt
+        dest: /tmp/template.txt
