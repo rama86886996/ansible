@@ -14,3 +14,8 @@
     dest: "{{APPUSERHOME}}"
     remote_src: yes
   become_user: "{{APPUSER}}"
+
+- name: Download WAR file
+  get_url:
+    url: "{{WAR_URL}}"
+    dest: ""
