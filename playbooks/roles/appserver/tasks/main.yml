@@ -15,6 +15,18 @@
     remote_src: yes
   become_user: "{{APPUSER}}"
 
+- name: Find old dir's
+  find: 
+    paths: "{{TOMCATDIR}}/webapps}}"
+    file_type: any
+  register: out
+
+- name: Remove old webapps
+  file:
+    path: "{{item.path}}"
+    state: absent
+  loop: "{{out.files}}"
+
 - name: Download WAR file
   get_url:
     url: "{{WAR_URL}}"
