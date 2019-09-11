@@ -2,22 +2,26 @@
   package:
     name: httpd
     state: present
+  notify: Restart HTTPD
 
 - name: COpy student app proxy conf
   copy:
     src: proxy.conf
     dest: /etc/httpd/conf.d/proxy.conf
+  notify: Restart HTTPD
 
 - name: Download default index file
   get_url:
     url: "{{INDEX_URL}}"
     dest: /var/www/html/index.html
+  notify: Restart HTTPD
 
 - name: Start web Service
   service:
     name: httpd
     state: started
     enabled: yes
-    
+  ##notify: Restart HTTPD
+
 
 
