@@ -14,3 +14,12 @@
         path: "{{item.path}}"
         state: absent
       loop: "{{out.files}}"
+
+    - name: Find the files
+      find:
+        paths: /tmp/demo
+        recurse: yes
+        file_type: any
+      register: out
+
+    - debug: msg="{{out.matched}}"
