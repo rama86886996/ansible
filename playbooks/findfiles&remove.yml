@@ -6,6 +6,7 @@
       find:
         paths: /tmp/demo
         recurse: yes
+        file_type: any
       register: out
       
     - debug: msg="{{out}}"
