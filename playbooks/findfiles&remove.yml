@@ -9,4 +9,8 @@
         file_type: any
       register: out
       
-    - debug: msg="{{out}}"
+    - name: Remove files
+      file:
+        path: "{{item.path}}"
+        state: absent
+      loop: "{{out.files}}"
