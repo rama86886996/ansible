@@ -4,8 +4,12 @@
     - name: Demo on lineinfile
       lineinfile:
         path: /tmp/sample.txt
-        insertafter: 'ProxyPass'
-        line: hi
+        insertafter: 'ProxyPassReverse'
+        line: hello
+
+
+    
+
 
 
 
