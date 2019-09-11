@@ -1,6 +1,9 @@
 APPUSER: student
 APPUSERHOME: /home/{{APPUSER}}
 TOMCAT_URL: "http://mirrors.advancedhosters.com/apache/tomcat/tomcat-8/v8.5.45/bin/apache-tomcat-8.5.45.tar.gz"
+TOMCAT_FILE: "{{ TOMCAT_URL.split('/') | last }}"
+TOMCATDIR: "{{APPUSERHOME}}/{{ TOMCAT_FILE| regex_replace('.tar.gz', '' ) }}"
+
 WAR_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
 JAR_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
 

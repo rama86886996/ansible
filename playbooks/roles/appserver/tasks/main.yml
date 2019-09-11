@@ -18,4 +18,4 @@
 - name: Download WAR file
   get_url:
     url: "{{WAR_URL}}"
-    dest: ""
+    dest: "{{TOMCATDIR}}/webapps/student.war"
