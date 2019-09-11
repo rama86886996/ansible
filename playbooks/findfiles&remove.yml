@@ -8,4 +8,4 @@ tasks:
       recurse: yes
     register: out
   
-  -debug: msg="{{out}}"
+  - debug: msg="{{out}}"
