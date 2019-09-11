@@ -23,4 +23,4 @@
       register: out
 
     #- debug: msg="{{out.matched}}"
-     - assert: { that: "out.matched == 0" }
+    - assert: { that: "out.matched == 0" }
