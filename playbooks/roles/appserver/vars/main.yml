@@ -7,3 +7,9 @@ TOMCATDIR: "{{APPUSERHOME}}/{{ TOMCAT_FILE| regex_replace('.tar.gz', '' ) }}"
 WAR_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
 JAR_URL: https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
 
+DBHOST: dummy
+DBUSER: dummy
+DBPASS: dummy
+DBNAME: dummy
+
+

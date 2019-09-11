@@ -32,3 +32,30 @@
     url: "{{WAR_URL}}"
     dest: "{{TOMCATDIR}}/webapps/student.war"
   become_user: "{{APPUSER}}"
+
+- name: Download JDBC jar file
+  get_url:
+    url: "{{JAR_URL}}"
+    dest: "{{TOMCATDIR}}/lib/mysql-connector.jar"
+  become_user: "{{APPUSER}}"
+
+  - name: copy context.xml
+    template:
+      src: context.xml
+      dest: "{{TOMCATDIR}}/conf/context.xml"
+    become_user: "{{APPUSER}}"
+
+  - name: Update tomcat init script
+    template:
+        src: studentapp-init
+        dest: /etc/init.d/tomcat
+        mode: 0755
+
+  - name: Reload systemctld
+    shell: systemctl daemon-reload
+
+  - name: Start tomcat service
+    service:
+        name: tomcat
+        state: started
+        enabled: yes
