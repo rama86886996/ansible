@@ -1,6 +1,6 @@
 - hosts: all
   vars:
     URL: http://mirrors.advancedhosters.com/apache/tomcat/tomcat-8/v8.5.45/bin/apache-tomcat-8.5.45.tar.gz
-    DIR: "{{ URL.split("/") }}"
+    DIR: "{{ URL.split('/'') }}"
   tasks:
     - debug: msg="{{DIR}}"
