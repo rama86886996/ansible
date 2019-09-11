@@ -1,6 +1,8 @@
 - name: Play book to setup web and app on server
   hosts: all
   become: yes
-  tasks:
+  roles:
+    - webserver
+    
     
         
