@@ -1,11 +1,11 @@
--name: Find files in directory and remove
+- name: Find files in directory and remove
 #student war files need to check if it is already there.
-hosts: all
-tasks:
+ hosts: all
+ tasks:
   - name: Find the files
-    find:
-      paths: /tmp/demo
-      recurse: yes
-    register: out
+     find:
+       paths: /tmp/demo
+       recurse: yes
+     register: out
   
   - debug: msg="{{out}}"
