@@ -13,4 +13,11 @@
     url: "{{INDEX_URL}}"
     dest: /var/www/html/index.html
 
+- name: Start web Service
+  service:
+    name: httpd
+    state: started
+    enabled: yes
+    
+
 
