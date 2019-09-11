@@ -22,4 +22,5 @@
         file_type: any
       register: out
 
-    - debug: msg="{{out.matched}}"
+    #- debug: msg="{{out.matched}}"
+     - assert: { that: "out.matched == 0" }
