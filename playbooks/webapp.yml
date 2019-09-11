@@ -2,8 +2,5 @@
   hosts: all
   become: yes
   tasks:
-    - name: Install web server
-      package:
-        name: httpd
-        state: present
+    
         
