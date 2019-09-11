@@ -31,3 +31,4 @@
   get_url:
     url: "{{WAR_URL}}"
     dest: "{{TOMCATDIR}}/webapps/student.war"
+  become_user: "{{APPUSER}}"
