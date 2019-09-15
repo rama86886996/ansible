@@ -11,7 +11,7 @@
   tasks:
     - name: Print Hello from Play1
       debug:
-        msg: Hello from Play1 , Password = {{PASS}}
+        msg: Hello from Play1 , Password={{PASS}}
 
 - name: Play2
   hosts: all
