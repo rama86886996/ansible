@@ -1,5 +1,7 @@
 dependencies:
   - role: roleA
     vars:
-      URL: yahoo.com
+      URL_DEFAULT: yahoo.com
+      URL_VAR: yahoo.com
       
+
