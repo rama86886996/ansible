@@ -1,5 +1,4 @@
 - name: Demo on role dependencies
   hosts: all
   roles:
-    - roleA
-    
+    - roleB
